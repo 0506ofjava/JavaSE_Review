@@ -1,8 +1,7 @@
-package jdbcBasic;
+package jdbcFoundation;
 
 import java.sql.*;
 import java.util.ResourceBundle;
-import jdbcBasic.JdbcUtil;
 
 /**
  * @author yq

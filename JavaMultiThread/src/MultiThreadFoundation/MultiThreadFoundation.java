@@ -1,11 +1,11 @@
-package MultiThreadBasic;
+package MultiThreadFoundation;
 
 /**
  * @author yq
  * @description
  * @create 2019-12-01-14
  */
-public class MultiThreadBasic {
+public class MultiThreadFoundation {
 
   public static void main(String[] args) {
     //

@@ -1,8 +1,5 @@
-package jdbcBasic;
+package jdbcFoundation;
 
-import java.io.*;
-import java.net.URI;
-import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 

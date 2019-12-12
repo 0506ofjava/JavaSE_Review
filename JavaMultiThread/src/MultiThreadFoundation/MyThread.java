@@ -1,4 +1,4 @@
-package MultiThreadBasic;
+package MultiThreadFoundation;
 
 /**
  * @author yq

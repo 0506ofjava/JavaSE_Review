@@ -7,14 +7,15 @@ import java.io.*;
  * @description
  * @create 2019-12-21-29
  */
-public class BioBasic {
+public class BioFoundation {
 
   public void charStreamShow(String path) {
 
     File file = new File(path);
-    FileInputStream fileInputStream = null;
-    InputStreamReader inputStreamReader = null;
-    BufferedReader bufferedReader = null;
+    //TODO：局部变量是否需要立即初始化，性能影响如何？
+    FileInputStream fileInputStream;
+    InputStreamReader inputStreamReader;
+    BufferedReader bufferedReader;
     try {
       fileInputStream = new FileInputStream(file);
       inputStreamReader = new InputStreamReader(fileInputStream);
@@ -36,9 +37,9 @@ public class BioBasic {
   }
 
   public static void main(String[] args) {
-      BioBasic bioBasic=new BioBasic();
+      BioFoundation bioFoundation =new BioFoundation();
       //获取当前项目的文件路径
-      String path=bioBasic.getClass().getResource("/bio/text.txt").getPath();
-      bioBasic.charStreamShow(path);
+      String path= bioFoundation.getClass().getResource("/bio/text.txt").getPath();
+      bioFoundation.charStreamShow(path);
   }
 }
