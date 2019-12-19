@@ -26,13 +26,17 @@ public class JdbcUtil{
     //      System.out.println(str);
     //    }
 
+    //读取properties的API，只需要写名称即可，不需要加后缀
     ResourceBundle resourceBundle = ResourceBundle.getBundle("resources/jdbc");
+    String className=resourceBundle.getString("jdbc.driver");
     String url = resourceBundle.getString("jdbc.url");
     String username = resourceBundle.getString("jdbc.username");
     String password = resourceBundle.getString("jdbc.password");
     Connection connection = null;
     try {
-      Class.forName("com.mysql.cj.jdbc.Driver");
+      //加载数据库驱动
+      Class.forName(className);
+      //
       connection = DriverManager.getConnection(url, username, password);
     } catch (ClassNotFoundException | SQLException classNotFound) {
       classNotFound.printStackTrace();
